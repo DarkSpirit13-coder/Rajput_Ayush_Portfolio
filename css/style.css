@@ -585,3 +585,157 @@ footer p + p {
     font-size: 12px;
     font-weight: 600;
 }
+
+/* ======================================
+   ABOUT ME SECTION
+   ====================================== */
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.about-content {
+    color: var(--muted-text);
+    font-size: 16px;
+}
+
+.about-content p {
+    margin-bottom: 18px;
+}
+
+.about-intro {
+    font-size: 21px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.about-intro span {
+    color: var(--accent-color);
+}
+
+.about-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.detail-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 9px;
+    padding: 18px;
+
+    transition: 0.3s ease;
+}
+
+.detail-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 18px var(--shadow-color);
+}
+
+.detail-card i {
+    color: var(--accent-color);
+    font-size: 23px;
+}
+
+.detail-card h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.detail-card p {
+    color: var(--muted-text);
+    font-size: 12px;
+}
+
+/* ======================================
+   TECHNICAL SKILLS SECTION
+   ====================================== */
+
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.skills-category {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.skills-category h3 {
+    color: var(--accent-color);
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.skills-category h3 i {
+    margin-right: 8px;
+}
+
+.skills-category .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills-category .skill-card {
+    padding: 10px 18px;
+    font-size: 14px;
+    border-radius: 6px;
+    background: var(--bg-color);
+}
+
+.skills-category .skill-card:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-4px);
+}
+
+/* ======================================
+   RESPONSIVE ABOUT AND SKILLS
+   ====================================== */
+
+@media screen and (max-width: 768px) {
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .about-details {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skills-category {
+        padding: 18px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .about-details {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-category h3 {
+        font-size: 16px;
+    }
+
+    .skills-category .skill-card {
+        font-size: 12px;
+        padding: 9px 12px;
+    }
+
+}

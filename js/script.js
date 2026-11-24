@@ -139,3 +139,53 @@ if ("IntersectionObserver" in window) {
     });
 
 }
+
+// ======================================
+// 4. CONTACT FORM VALIDATION
+// ======================================
+
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+
+contactForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    // Check empty fields
+    if (!name || !email || !message) {
+
+        formStatus.textContent =
+            "Please complete all fields.";
+
+        return;
+    }
+
+    // Check name length
+    if (name.length < 2) {
+
+        formStatus.textContent =
+            "Name must contain at least 2 characters.";
+
+        return;
+    }
+
+    // Check message length
+    if (message.length < 10) {
+
+        formStatus.textContent =
+            "Message must contain at least 10 characters.";
+
+        return;
+    }
+
+    // Display validation success
+    formStatus.textContent =
+        "Form validated successfully! Thank you for reaching out.";
+
+    contactForm.reset();
+
+});

@@ -296,31 +296,115 @@
 
 </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <h2>Contact Me</h2>
+       
+<!-- Contact Section -->
+<section id="contact" class="section">
+
+    <h2>Get In Touch</h2>
+
+    <p class="contact-intro">
+        Have a project idea, collaboration opportunity or
+        just want to connect? Feel free to reach out.
+    </p>
+
+    <div class="contact-container">
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+
+            <h3>Let's Connect</h3>
+
+            <p>
+                I'm always interested in learning,
+                collaborating and exploring new technologies.
+            </p>
+
+            <div class="contact-item">
+                <i class="bi bi-github"></i>
+                <div>
+                    <h4>GitHub</h4>
+                    <a href="https://github.com/DarkSpirit13-coder"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        DarkSpirit13-coder
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="bi bi-shield-check"></i>
+                <div>
+                    <h4>Area of Interest</h4>
+                    <p>Cybersecurity & Web Development</p>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/DarkSpirit13-coder"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="GitHub">
+                    <i class="bi bi-github"></i>
+                </a>
+
+                <!-- Add your LinkedIn URL when available -->
+                <!-- Add your other social links here -->
+            </div>
+
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-container">
+
+            <h3>Send Me a Message</h3>
 
             <form id="contact-form">
 
-                <input type="text" id="name"
-                    placeholder="Your Name" required>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                        minlength="2">
+                </div>
 
-                <input type="email" id="email"
-                    placeholder="Your Email" required>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required>
+                </div>
 
-                <textarea id="message"
-                    placeholder="Your Message" required></textarea>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your message..."
+                        required
+                        minlength="10"></textarea>
+                </div>
 
                 <button type="submit" class="btn">
+                    <i class="bi bi-send"></i>
                     Send Message
                 </button>
 
             </form>
 
-            <p id="form-status" aria-live="polite"></p>
-        </section>
+            <p id="form-status" role="status" aria-live="polite"></p>
 
-    </main>
+        </div>
+
+    </div>
+
+</section>
 
     <!-- Footer -->
     <footer>

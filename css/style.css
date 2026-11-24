@@ -1,0 +1,587 @@
+
+/* =========================================
+   RAJPUT AYUSH KIRANKUMAR
+   CYBERSECURITY PORTFOLIO
+   ========================================= */
+
+/* 1. CSS VARIABLES */
+
+:root {
+    --bg-color: #0d1117;
+    --secondary-bg: #161b22;
+    --card-bg: #161b22;
+    --text-color: #e6edf3;
+    --muted-text: #8b949e;
+    --accent-color: #39ff14;
+    --border-color: #30363d;
+    --shadow-color: rgba(57, 255, 20, 0.12);
+}
+
+/* Light theme support */
+
+body.light-theme {
+    --bg-color: #f5f7fa;
+    --secondary-bg: #ffffff;
+    --card-bg: #ffffff;
+    --text-color: #17212b;
+    --muted-text: #596675;
+    --accent-color: #198c00;
+    --border-color: #dce2e8;
+    --shadow-color: rgba(25, 140, 0, 0.12);
+}
+
+/* 2. GLOBAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+/* 3. NAVIGATION BAR */
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    color: var(--muted-text);
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Theme and menu buttons */
+
+.theme-toggle,
+.menu-toggle {
+    background: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 9px 13px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.theme-toggle:hover,
+.menu-toggle:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 12px var(--shadow-color);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* 4. HERO SECTION */
+
+.hero {
+    min-height: 85vh;
+    padding: 100px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(57, 255, 20, 0.07),
+            transparent 65%
+        );
+}
+
+.terminal-text {
+    color: var(--accent-color);
+    font-family: 'Courier New', monospace;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 6vw, 58px);
+    max-width: 950px;
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: var(--accent-color);
+    text-shadow: 0 0 18px var(--shadow-color);
+}
+
+.hero h2 {
+    color: var(--muted-text);
+    font-size: clamp(18px, 3vw, 25px);
+    margin-bottom: 20px;
+}
+
+.hero > p:not(.terminal-text) {
+    max-width: 650px;
+    color: var(--muted-text);
+    margin-bottom: 30px;
+}
+
+/* 5. BUTTONS */
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 7px;
+
+    background: var(--accent-color);
+    color: #071006;
+
+    border: 1px solid var(--accent-color);
+    border-radius: 6px;
+
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--accent-color);
+    box-shadow: 0 0 18px var(--shadow-color);
+    transform: translateY(-3px);
+}
+
+/* 6. GENERAL SECTIONS */
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 85px 25px;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.section h2::after {
+    content: "";
+    display: block;
+
+    width: 65px;
+    height: 3px;
+
+    background: var(--accent-color);
+    margin: 12px auto;
+
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+#about p {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    color: var(--muted-text);
+    font-size: 17px;
+}
+
+/* 7. SKILLS SECTION */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+
+    padding: 25px 15px;
+    text-align: center;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.skill-card:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    transform: translateY(-7px);
+    box-shadow: 0 5px 20px var(--shadow-color);
+}
+
+/* 8. PROJECTS SECTION */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+
+    padding: 30px;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+
+    animation: cardEntrance 0.7s ease both;
+}
+
+
+/* Scroll reveal animation */
+
+.project-card {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.project-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Respect reduced motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    .project-card,
+    .project-card.show {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.project-card h3 {
+    color: var(--accent-color);
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: var(--muted-text);
+}
+
+/* Project entrance animation */
+
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 9. CONTACT FORM */
+
+#contact-form {
+    max-width: 650px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+
+    background: var(--secondary-bg);
+    color: var(--text-color);
+
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px var(--shadow-color);
+}
+
+#contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+#contact-form .btn {
+    align-self: flex-start;
+}
+
+#form-status {
+    text-align: center;
+    margin-top: 15px;
+    color: var(--accent-color);
+}
+
+/* 10. FOOTER */
+
+footer {
+    background: var(--secondary-bg);
+    border-top: 1px solid var(--border-color);
+
+    text-align: center;
+    padding: 25px 15px;
+
+    color: var(--muted-text);
+    font-size: 14px;
+}
+
+footer p + p {
+    margin-top: 5px;
+}
+
+/* 11. MOBILE RESPONSIVENESS */
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        padding: 14px 18px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        margin-right: 12px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+        padding: 20px;
+
+        display: none;
+        flex-direction: column;
+        gap: 18px;
+
+        background: var(--secondary-bg);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 5px;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding: 80px 20px;
+    }
+
+    .section {
+        padding: 65px 20px;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 12. SMALL MOBILE SCREENS */
+
+@media screen and (max-width: 400px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .theme-toggle,
+    .menu-toggle {
+        padding: 7px 10px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section h2 {
+        font-size: 27px;
+    }
+}
+
+/* 13. ACCESSIBILITY: REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ======================================
+   PROJECT CARD ANIMATION FIX
+   ====================================== */
+
+.project-card {
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile animation support */
+
+@media screen and (max-width: 768px) {
+
+    .project-card {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    .project-card.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* Hover effect */
+
+.project-card.show:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+/* Project icons */
+
+.project-icon {
+    font-size: 32px;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+/* Project technology tags */
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.project-tech span {
+    background: var(--bg-color);
+    color: var(--accent-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 600;
+}

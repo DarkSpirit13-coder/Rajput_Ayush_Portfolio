@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Personal portfolio of Rajput Ayush Kirankumar, cybersecurity enthusiast and developer.">
+
+    <title>Rajput Ayush Kirankumar | Portfolio</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                AYUSH<span>_</span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle"
+                aria-label="Toggle navigation" aria-expanded="false">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button id="theme-toggle" class="theme-toggle"
+                aria-label="Switch theme">
+                <i class="bi bi-sun"></i>
+            </button>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <p class="terminal-text">root@ayush:~$ whoami</p>
+
+            <h1>Hi, I'm <span>Rajput Ayush Kirankumar</span></h1>
+
+            <h2>Cybersecurity Enthusiast & Developer</h2>
+
+            <p>
+                Passionate about cybersecurity, ethical hacking,
+                networking and building secure digital solutions.
+            </p>
+
+            <a href="#projects" class="btn">Explore My Work</a>
+            <a href="#contact" class="btn">Contact Me</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2>About Me</h2>
+
+            <p>
+                I am a technology enthusiast interested in cybersecurity,
+                web development and computer networking. I continuously
+                work on improving my technical knowledge through
+                practical projects and hands-on learning.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2>Technical Skills</h2>
+
+            <div class="skills-container">
+                <div class="skill-card">HTML5</div>
+                <div class="skill-card">CSS3</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">Python</div>
+                <div class="skill-card">MySQL</div>
+                <div class="skill-card">Networking</div>
+                <div class="skill-card">Kali Linux</div>
+                <div class="skill-card">Cybersecurity</div>
+            </div>
+        </section>
+
+        
+<!-- Projects Section -->
+<section id="projects" class="section">
+
+    <h2>My Projects</h2>
+
+    <div class="projects-container">
+
+        <!-- Project 1 -->
+        <article class="project-card">
+
+            <div class="project-icon">
+                <i class="bi bi-shield-lock"></i>
+            </div>
+
+            <h3>Secure Hash by Spirit</h3>
+
+            <p>
+                A Python Flask-based security application
+                designed for text encryption and decryption,
+                SHA-256 hashing and secure key validation.
+            </p>
+
+            <div class="project-tech">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>SHA-256</span>
+                <span>Fernet</span>
+            </div>
+
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+
+            <div class="project-icon">
+                <i class="bi bi-hourglass-split"></i>
+            </div>
+
+            <h3>Qaventra</h3>
+
+            <p>
+                A digital queue-management startup concept
+                designed to reduce waiting time through
+                virtual tokens, live queue tracking and
+                estimated turn notifications.
+            </p>
+
+            <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>UI/UX</span>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+
+            <form id="contact-form">
+
+                <input type="text" id="name"
+                    placeholder="Your Name" required>
+
+                <input type="email" id="email"
+                    placeholder="Your Email" required>
+
+                <textarea id="message"
+                    placeholder="Your Message" required></textarea>
+
+                <button type="submit" class="btn">
+                    Send Message
+                </button>
+
+            </form>
+
+            <p id="form-status" aria-live="polite"></p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 Rajput Ayush Kirankumar.
+            All Rights Reserved.
+        </p>
+        <p>Designed with passion for technology.</p>
+    </footer>
+
+</body>
+</html>

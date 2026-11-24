@@ -55,3 +55,6 @@ and queue tracking.
 Rajput Ayush Kirankumar
 
 GitHub: https://github.com/DarkSpirit13-coder
+## Portfolio Preview
+
+![Rajput Ayush Portfolio](assets/images/portfolio-preview.png)
